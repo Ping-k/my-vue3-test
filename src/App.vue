@@ -1,15 +1,30 @@
+<!--
+ * @Descripttion: 
+ * @version: v0.0.1
+ * @Author: ZhouYanPing
+ * @Date: 2023-04-06 10:11:02
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2023-04-06 17:26:47
+-->
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <LoadingA title="PingkBtn" @myClick="(...arg) => { btnClick(...arg) }"></LoadingA>
+  <LoadingB></LoadingB>
 </template>
 
-<script>
+<script lang="js">
 import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  methods: {
+    btnClick(...arg) {
+      console.log("btnClick22", arg);
+    }
   }
 }
 </script>
